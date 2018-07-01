@@ -14,7 +14,7 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({news: []});
-    const newsURL = "https://newsapi.org/v2/everything?sources=the-times-of-india&pageSize=100&apiKey=816c141dbc5f43819973fa47631c4433";
+    const newsURL = "https://newsapi.org/v2/everything?sources=the-times-of-india&pageSize=100&sortBy=publishedAt&apiKey=816c141dbc5f43819973fa47631c4433";
     fetch(newsURL)
     .then((res) => {
       return res.json();
@@ -29,7 +29,7 @@ class App extends Component {
 
   getScienceNews() {
     this.setState({news: []});
-    const newsURL = "https://newsapi.org/v2/everything?sources=new-scientist&pageSize=100&apiKey=816c141dbc5f43819973fa47631c4433";
+    const newsURL = "https://newsapi.org/v2/everything?q=science&language=en&pageSize=100&sortBy=publishedAt&apiKey=816c141dbc5f43819973fa47631c4433";
     fetch(newsURL)
     .then((res) => {
       return res.json();
@@ -59,7 +59,7 @@ class App extends Component {
 
   getEntertenmentNews() {
     this.setState({news: []});
-    const newsURL = "https://newsapi.org/v2/everything?q=bollywood,hollywood&pageSize=100&sortBy=publishedAt&apiKey=816c141dbc5f43819973fa47631c4433";
+    const newsURL = "https://newsapi.org/v2/everything?q=hollywood,bollywood&pageSize=100&sortBy=publishedAt&apiKey=816c141dbc5f43819973fa47631c4433";
     fetch(newsURL)
     .then((res) => {
       return res.json();
@@ -72,6 +72,85 @@ class App extends Component {
     })
   }
 
+  getPoliticsNews() {
+    this.setState({news: []});
+    const newsURL = "https://newsapi.org/v2/everything?sources=the-times-of-india&q=politics&pageSize=100&sortBy=publishedAt&apiKey=816c141dbc5f43819973fa47631c4433";
+    fetch(newsURL)
+    .then((res) => {
+      return res.json();
+    })
+    .then((news) => {
+      return this.setState({news: news.articles});
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }
+
+  getBusinessNews() {
+    this.setState({news: []});
+    const newsURL = "https://newsapi.org/v2/everything?sources=the-times-of-india&q=business&pageSize=100&sortBy=publishedAt&apiKey=816c141dbc5f43819973fa47631c4433";
+    fetch(newsURL)
+    .then((res) => {
+      return res.json();
+    })
+    .then((news) => {
+      return this.setState({news: news.articles});
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }
+
+  getTechnologyNews() {
+    this.setState({news: []});
+    const newsURL = "https://newsapi.org/v2/everything?sources=the-times-of-india&q=technology&pageSize=100&sortBy=publishedAt&apiKey=816c141dbc5f43819973fa47631c4433";
+    fetch(newsURL)
+    .then((res) => {
+      return res.json();
+    })
+    .then((news) => {
+      return this.setState({news: news.articles});
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }
+
+  getMoviesNews() {
+    this.setState({news: []});
+    const newsURL = "https://newsapi.org/v2/everything?q=movies&pageSize=100&sortBy=publishedAt&apiKey=816c141dbc5f43819973fa47631c4433";
+    fetch(newsURL)
+    .then((res) => {
+      return res.json();
+    })
+    .then((news) => {
+      return this.setState({news: news.articles});
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }
+
+  getCricketNews() {
+    this.setState({news: []});
+    const newsURL = "https://newsapi.org/v2/everything?q=cricket&pageSize=100&language=en&sortBy=publishedAt&apiKey=816c141dbc5f43819973fa47631c4433";
+    fetch(newsURL)
+    .then((res) => {
+      return res.json();
+    })
+    .then((news) => {
+      return this.setState({news: news.articles});
+    })
+    .catch((err) => {
+      console.log(err);
+    })  
+  }
+
+
+
+
+
 
 
   render() {
@@ -82,6 +161,11 @@ class App extends Component {
           scienceNews={this.getScienceNews.bind(this)}
           sportNews={this.getSportNews.bind(this)}
           entertenmentNews={this.getEntertenmentNews.bind(this)}
+          politicsNews={this.getPoliticsNews.bind(this)}
+          businessNews={this.getBusinessNews.bind(this)}
+          technologyNews={this.getTechnologyNews.bind(this)}
+          moviesNews={this.getMoviesNews.bind(this)}
+          cricketNews={this.getCricketNews.bind(this)}
         />
         <div className="container">
             <NewsList allNews={this.state.news} />
