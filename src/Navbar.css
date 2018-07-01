@@ -1,3 +1,16 @@
 nav .nav-wrapper{
   padding: 0 1.6%;
 }
+
+nav {
+  color: #ffe143 !important;
+  background-color: #272700;
+}
+
+nav a {
+  color: #ffe143 !important;
+}
+
+.dropdown-content {
+  background-color: #272700;
+}

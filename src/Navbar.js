@@ -6,7 +6,7 @@ class Navbar extends Component {
   render() {
     return(
       <div className="navbar-fixed">
-        <nav className="#ee6e73">
+        <nav>
           <div className="nav-wrapper">
             <div className="col s12">
             <a className="brand-logo left">News Vite</a>

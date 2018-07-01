@@ -16,7 +16,7 @@ class News extends Component {
         <div className="card">
           <div className="card-image">
             <img
-            src={this.props.urlToImage === null || "" ? this.state.urlToImage : this.props.urlToImage} alt="text"/>
+            src={this.props.urlToImage === null || "" ? this.state.urlToImage : this.props.urlToImage} alt="Image"/>
           </div>
           <div className="card-content">
             <span className="card-title">{this.props.title}...</span>
