@@ -23,7 +23,7 @@ class News extends Component {
             <p>{this.props.description}...</p>
           </div>
           <div className="card-action">
-            <a href={this.props.url} className="btn">Shaw More</a>
+            <a href={this.props.url} target="_blank" className="btn">Shaw More</a>
           </div>
         </div>
     )
