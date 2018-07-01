@@ -24,6 +24,8 @@ class Navbar extends Component {
               <li><a onClick={this.props.technologyNews}>Technology</a></li>
               <li><a onClick={this.props.moviesNews}>Movies</a></li>
               <li><a onClick={this.props.cricketNews}>Cricket</a></li>
+              <li><a onClick={this.props.bollywoodNews}>Bollywood</a></li>
+              <li><a onClick={this.props.hollywoodNews}>Hollywood</a></li>
             </ul>
 
             <ul id='dropdown1' className='dropdown-content'>
@@ -36,6 +38,8 @@ class Navbar extends Component {
               <li><a onClick={this.props.technologyNews}>Technology</a></li>
               <li><a onClick={this.props.moviesNews}>Movies</a></li>
               <li><a onClick={this.props.cricketNews}>Cricket</a></li>
+              <li><a onClick={this.props.bollywoodNews}>Bollywood</a></li>
+              <li><a onClick={this.props.hollywoodNews}>Hollywood</a></li>
             </ul>
             </div>
           </div>
