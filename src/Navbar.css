@@ -14,3 +14,7 @@ nav a {
 .dropdown-content {
   background-color: #272700;
 }
+
+.brand-logo{
+  cursor: pointer !important;
+}

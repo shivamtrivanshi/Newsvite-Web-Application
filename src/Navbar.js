@@ -9,7 +9,7 @@ class Navbar extends Component {
         <nav>
           <div className="nav-wrapper">
             <div className="col s12">
-            <a className="brand-logo left">News Vite</a>
+            <a className="brand-logo left">Newsvite</a>
             <a className='dropdown-trigger right hide-on-med-and-up' data-target='dropdown1'><i className="material-icons">more_vert</i></a>
             <ul className="right hide-on-small-only">
               <li><a onClick={this.props.allNews}>Headlines</a></li>

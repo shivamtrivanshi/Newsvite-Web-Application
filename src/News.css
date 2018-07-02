@@ -2,3 +2,13 @@
   color: black;
   background-color: #ffe143;
 }
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+  background-color: #272727;
+  color: white;
+}
+
+.btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus {
+  background-color: #272727;
+  color: white;
+}

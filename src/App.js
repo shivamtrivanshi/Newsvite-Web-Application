@@ -15,7 +15,7 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({news: []});
-    const newsURL = `https://newsapi.org/v2/everything?sources=the-times-of-india&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
+    const newsURL = `https://newsapi.org/v2/everything?sources=the-times-of-india,the-hindu&language=en&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
     fetch(newsURL)
     .then((res) => {
       return res.json();
@@ -30,7 +30,7 @@ class App extends Component {
 
   getScienceNews() {
     this.setState({news: []});
-    const newsURL = `https://newsapi.org/v2/everything?q=science&language=en&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
+    const newsURL = `https://newsapi.org/v2/everything?sources=national-geographic,next-big-future&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
     fetch(newsURL)
     .then((res) => {
       return res.json();
@@ -45,7 +45,7 @@ class App extends Component {
 
   getSportNews() {
     this.setState({news: []});
-    const newsURL = `https://newsapi.org/v2/everything?q=football,cricket&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
+    const newsURL = `https://newsapi.org/v2/everything?sources=bleacher-report,the-times-of-india,the-hindu&q=cricket,football&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
     fetch(newsURL)
     .then((res) => {
       return res.json();
@@ -60,7 +60,7 @@ class App extends Component {
 
   getEntertenmentNews() {
     this.setState({news: []});
-    const newsURL = `https://newsapi.org/v2/everything?q=hollywood,bollywood&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
+    const newsURL = `https://newsapi.org/v2/everything?sources=buzzfeed,entertainment-weekly,ign,mtv-news&language=en&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
     fetch(newsURL)
     .then((res) => {
       return res.json();
@@ -75,7 +75,7 @@ class App extends Component {
 
   getPoliticsNews() {
     this.setState({news: []});
-    const newsURL = `https://newsapi.org/v2/everything?sources=the-times-of-india&q=politics&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
+    const newsURL = `https://newsapi.org/v2/everything?sources=the-times-of-india,the-hindu&q=politic&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
     fetch(newsURL)
     .then((res) => {
       return res.json();
@@ -90,7 +90,7 @@ class App extends Component {
 
   getBusinessNews() {
     this.setState({news: []});
-    const newsURL = `https://newsapi.org/v2/everything?sources=the-times-of-india&q=business&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
+    const newsURL = `https://newsapi.org/v2/everything?sources=the-times-of-india,the-hindu&q=business&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
     fetch(newsURL)
     .then((res) => {
       return res.json();
@@ -105,7 +105,7 @@ class App extends Component {
 
   getTechnologyNews() {
     this.setState({news: []});
-    const newsURL = `https://newsapi.org/v2/everything?sources=the-times-of-india&q=technology&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
+    const newsURL = `https://newsapi.org/v2/everything?sources=wired,the-verge,the-next-web,techcrunch,techradar&language=en&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
     fetch(newsURL)
     .then((res) => {
       return res.json();
@@ -120,7 +120,7 @@ class App extends Component {
 
   getMoviesNews() {
     this.setState({news: []});
-    const newsURL = `https://newsapi.org/v2/everything?q=movies&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
+    const newsURL = `https://newsapi.org/v2/everything?q=movies&language=en&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
     fetch(newsURL)
     .then((res) => {
       return res.json();
@@ -135,7 +135,7 @@ class App extends Component {
 
   getCricketNews() {
     this.setState({news: []});
-    const newsURL = `https://newsapi.org/v2/everything?q=cricket&pageSize=100&language=en&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
+    const newsURL = `https://newsapi.org/v2/everything?sources=espn-cric-info&language=en&pageSize=100&sortBy=publishedAt&apiKey=${apiKey.apiKey}`;
     fetch(newsURL)
     .then((res) => {
       return res.json();
