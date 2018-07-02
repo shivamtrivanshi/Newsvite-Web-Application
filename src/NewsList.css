@@ -2,6 +2,10 @@
   margin-top: 100px;
 }
 
+.spinner-blue, .spinner-blue-only {
+  border-color: #ffe143;
+}
+
 
 @media (min-width: 640px){
   .card-columns {
