@@ -16,3 +16,7 @@
 .justify{
   text-align: justify;
 }
+
+.overflow-text{
+  overflow-wrap: break-word;
+}

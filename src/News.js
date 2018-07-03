@@ -19,8 +19,8 @@ class News extends Component {
         src={this.props.urlToImage === null || "" ? this.state.urlToImage : this.props.urlToImage} alt="ImageNotFound"/>
       </div>
       <div className="card-content">
-        <span className="card-title">{this.props.title}</span>
-        <p className="justify">{this.props.description}</p>
+        <span className="card-title overflow-text">{this.props.title}</span>
+        <p className="justify overflow-text">{this.props.description}</p>
       </div>
       <div className="card-action">
         <a href={this.props.url} target="_blank" className="btn">Show More</a>
